@@ -59,6 +59,10 @@ jobs:
           role-to-assume: ${{ secrets.GU_RIFF_RAFF_ROLE_ARN }}
           aws-region: eu-west-1
 
+      - name: Upload to test-lambda-riffraff-2 riffraff bucket
+        run: |
+            aws s3 cp ./packages/test/testUploadFileFromTestLambdaRiffraff1 s3://riffraff-artifact/playground::test-lambda-riffraff-2/999
+
       # See https://github.com/guardian/actions-riff-raff
       - name: Upload to riff-raff
         uses: guardian/actions-riff-raff@v2
