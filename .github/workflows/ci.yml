@@ -61,7 +61,7 @@ jobs:
 
       - name: Upload to test-lambda-riffraff-2 riffraff bucket
         run: |
-            aws s3 cp ./packages/test/testUploadFileFromTestLambdaRiffraff1 s3://riffraff-artifact/playground::test-lambda-riffraff-2/999
+            aws s3 cp ./packages/test/testUploadFileFromTestLambdaRiffraff1 s3://riffraff-artifact/playground::test-lambda-riffraff-2/999/testUploadFileFromTestLambdaRiffraff1
 
       # See https://github.com/guardian/actions-riff-raff
       - name: Upload to riff-raff
